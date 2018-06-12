@@ -13,8 +13,8 @@ app.get('/api/user', (req, res) => {
 })
 
 app.use(express.static(path.join(__dirname, 'client/build')));
-app.use('*', (req, res) => {
-  res.sendFile(path.join(__dirnmame, 'client/build/index.html'));
-})
+// app.use('*', (req, res) => {
+//   res.sendFile(path.join(__dirnmame, 'client/build/index.html'));
+// })
 
 app.listen(port, () => console.log(`Node server is running on port: ${port}`));
