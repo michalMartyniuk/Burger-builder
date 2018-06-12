@@ -1,0 +1,53 @@
+.Modal {
+  width: 50%;
+  font-size: 2rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0rem;
+  border-radius: 1rem;
+  z-index: 10;
+}
+
+.cardButtons {
+  display: flex;
+}
+
+.cardBtn {
+  flex: 1;
+  border: none;
+  margin: 1rem;
+  font-size: 2rem;
+  padding: 1.2rem;
+  color: white;
+  letter-spacing: .2rem;
+}
+
+.cardBtn:first-child {
+  margin-right: auto;
+  background-color: rgb(210, 95, 16);
+}
+
+.cardBtn:first-child:hover {
+  background-color: rgb(220, 110, 30);
+}
+
+.cardBtn:nth-child(2) {
+  background-color: rgb(60, 132, 17)
+}
+
+.cardBtn:nth-child(2):hover {
+  background-color: rgb(80, 154, 36);
+}
+
+.cardBtn:focus {
+  outline: none;
+}
+
+@media (min-width: 950px) {
+  .Modal {
+    width: 40%;
+  }
+}

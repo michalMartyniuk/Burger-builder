@@ -1,0 +1,15 @@
+.HideControlsButton {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60%;
+  transform: translateX(-50%);
+  opacity: 0;
+  height: 3.4rem;
+  transition: all .5s;
+}
+
+.HideControlsButton:hover {
+  opacity: 1;
+  background-color: rgb(197, 181, 171);
+}

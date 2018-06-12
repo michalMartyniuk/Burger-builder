@@ -1,0 +1,18 @@
+.cancelBtn {
+  flex: 1;
+  border: none;
+  margin: 1rem;
+  font-size: 2rem;
+  padding: 1.2rem;
+  color: white;
+  letter-spacing: .2rem;
+  background-color: rgb(210, 95, 16);
+}
+
+.cancelBtn:hover {
+  background-color: rgb(220, 110, 30);
+}
+
+.cancelBtn:focus {
+  outline: none;
+}

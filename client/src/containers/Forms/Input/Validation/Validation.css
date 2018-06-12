@@ -1,0 +1,14 @@
+.valid {
+  background-color: #b3ecb3;
+}
+
+.invalid {
+  padding: .2rem .7rem;
+  margin-top: .7rem;
+  background-color: #f3d3d3;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  font-style: italic;
+  border-radius: .7rem;
+  width: 90%
+}

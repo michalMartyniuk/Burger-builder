@@ -1,0 +1,32 @@
+.Button {
+  color: white;
+  font-size: 2rem;
+  padding: .8rem 5rem;
+  outline: none;
+  border: none;
+  border-radius: .5rem;
+  margin: 2.5rem 0;
+  cursor: pointer;
+}
+
+.Button:focus {
+  outline:none;
+}
+
+.success {
+  background-color: #25a025;
+  margin-right: auto;
+}
+
+.success:hover {
+  background-color: #30bb30;
+}
+
+.danger {
+  background-color: red;
+  margin-left: auto;  
+}
+
+.danger:hover {
+  background-color: #ff4b4b;
+}

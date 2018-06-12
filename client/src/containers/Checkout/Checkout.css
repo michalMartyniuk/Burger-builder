@@ -1,0 +1,32 @@
+.Checkout {
+  font-size: 2rem;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin: 1rem auto auto auto;
+  font-size: 2rem;
+}
+
+.Form h2 {
+  font-size: 3rem;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* .summaryTitle {
+  font-size: 3rem;
+  align-self: center;
+  margin: 1rem 0 2rem 0;
+} */

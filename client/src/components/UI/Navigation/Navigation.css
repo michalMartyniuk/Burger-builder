@@ -1,0 +1,78 @@
+.Navigation {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #4c3f36;
+  height: 5rem;
+  width: 100%;
+  padding: 0; 
+  z-index: 70;
+  align-items: center;
+}
+
+.Navigation a:hover {
+  text-decoration: none;
+}
+
+.linkDiv {
+  color: white;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
+
+.linkDiv:hover {
+  background-color: #c15711;
+}
+
+.logout {
+  font-size: 2rem;
+  border: none;
+  margin-left: auto;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background-color: #4c3f37;
+  color: white;
+}
+
+.logout:hover {
+  background-color: #c15711;
+}
+
+.logout:focus {
+  outline: none;
+}
+
+@media(max-width: 760px) {
+  .Navigation {
+    padding: 0;
+  }
+
+  .linkDiv {
+    display: none;
+  }
+
+  .logout {
+    display: none;
+  }
+  
+  .menuIcon {
+    height: 100%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+  }
+
+  .menuIcon:hover {
+    background-color: #c15711;
+  }
+  .iconItem {
+    width: 50px;
+    height: 3px;
+    margin: .4rem;
+    background-color: white;
+  }
+}

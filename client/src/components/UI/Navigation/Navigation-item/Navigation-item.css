@@ -1,0 +1,14 @@
+.NavigationItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  padding: 0 1rem;
+  margin: 0.7rem 0;
+}
+
+.NavigationItem:hover {
+  background-color: rgb(165, 111, 79);
+  cursor: pointer;
+}
