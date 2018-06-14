@@ -7,7 +7,7 @@
 
 .summaryTotalPrice {
   background-color: #e8e8e8;
-  margin-top: 4rem;
+  margin-top: 1.5rem;
   padding: 1.5rem 3rem;
   border: 1px solid black;
   border-radius: .5rem;
@@ -20,4 +20,43 @@
   text-align: center;
   font-size: 2.2rem;
   width: 50%;
+}
+
+.orderTable {
+  width: 80%;
+  margin: 2rem;
+}
+
+.tableRow {
+  text-align: center;
+  background-color: #e8e8e8;
+}
+
+.tableRow th {
+  padding: .7rem 1rem;
+}
+
+.name {
+ 
+}
+
+.quantity {
+
+}
+
+.price {
+
+}
+
+
+@media (max-width: 550px) {
+  .orderTable {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .summaryTotalPrice {
+    padding: 1.5rem 1rem;
+  }
 }

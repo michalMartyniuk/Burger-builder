@@ -1,50 +1,56 @@
-@media (min-width: 760px) {
+.BurgerControls {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  bottom: 0;
+  padding: 1rem;
+  background-color: #765b4c;
+  font-size: 1.8rem;
+  color: white;
+  margin-top: 3rem;
+  transition: all .5s;
+}
+
+.checkout {
+  display: flex;
+  margin-top: 0;
+  align-items: center;
+  justify-content: flex-end;
+  height: 5rem;
+}
+
+.totalPrice {
+  background-color: #4c3f37;
+  color: white;
+  padding: .7rem 2rem;
+  font-size: 2rem;
+}
+
+.checkoutBtn {
+  background-color: #d25f11;
+  width: 40%;
+  color: white;
+  border: none;
+  padding: .7rem 2rem;
+  outline: none;
+  font-size: 2rem;
+  transition: all .5s;
+  backface-visibility: hidden;
+}
+
+.checkoutBtn:hover {
+  background-color: #ec6c15;
+}
+
+
+@media (max-width: 450px) {
   .BurgerControls {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    bottom: 0;
-    padding: 1rem;
-    background-color: #765b4c;
-    font-size: 1.8rem;
-    color: white;
-    margin-top: 3rem;
-    transition: all .5s;
-  }
-
-  .checkout {
-    display: flex;
-    margin-top: 0;
-    align-items: center;
-    justify-content: flex-end;
-    height: 5rem;
-  }
-
-  .totalPrice {
-    background-color: #4c3f37;
-    color: white;
-    padding: .7rem 2rem;
-    font-size: 2rem;
-  }
-
-  .checkoutBtn {
-    background-color: #d25f11;
-    color: white;
-    border: none;
-    padding: .7rem 2rem;
-    outline: none;
-    font-size: 2rem;
-    transition: all .5s;
-    backface-visibility: hidden;
-  }
-
-  .checkoutBtn:hover {
-    background-color: #ec6c15;
+    font-size: 1.7rem;
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 760px) and (min-width: 450px) {
   .BurgerControls {
     position: fixed;
     left: 50%;

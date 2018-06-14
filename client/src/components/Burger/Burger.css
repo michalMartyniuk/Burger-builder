@@ -6,3 +6,13 @@
   font-weight: bold;
   font-size: 2rem; 
 }
+
+.burgerText {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  .burgerText {
+    font-size: 1.5rem;
+  }
+}

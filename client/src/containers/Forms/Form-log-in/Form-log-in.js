@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Input from '../Input/Input';
 import formConfig from '../Form-config/log-in-config';
 import Button from '../../../components/UI/Buttons/Button/Button';
+import GoogleButton from '../../../components/UI/Buttons/google-button/google-button';
+import Modal from '../../../components/UI/Modal/Modal';
+import Aux from '../../../hoc/Aux';
+import Backdrop from '../../../components/UI/Backdrop/Backdrop';
 
 import Card from '../../../components/UI/Card/Card';
 import styles from './Form-log-in.css';
@@ -76,6 +80,7 @@ class SignupForm extends Component {
   render() {
     let inputs = Object.keys(this.state.formConfig).map( key => {
       return <Input
+        inputClass="Input"
         {...this.state.formConfig[key].config}
         validated={this.validatedHandler}
         key={key}
@@ -88,17 +93,24 @@ class SignupForm extends Component {
         type={key === 'password' || key === 'confirmPassword' ? 'password' : 'text'}
       />
     })
-    
+
     return (
-      <Card title="Log in" styleTitle={{fontSize: '4rem'}} styleCard={{marginTop: '2rem'}}>
-        <form className={styles.Form} onSubmit={this.formSubmitHandler}>
-          {inputs}
-          <div className={styles.wrapper}>
-            <Button type="text" btnclass="success">Order</Button>        
-            <Button type="text" btnclass="danger">Cancel</Button>
-          </div>
-        </form>
-      </Card>
+      <div className={styles.standardLogin}>
+        <Card title="Log in" styleTitle={{fontSize: '4rem'}} styleCard={{marginTop: '2rem'}}>
+          <form className={styles.Form} onSubmit={this.formSubmitHandler}>
+            <GoogleButton googleClass="googleButton" text="Log in"/>
+            <div className={styles.loginOr}>
+              <hr/>
+              <span>OR</span> 
+              <hr/>
+            </div>          
+            {inputs}
+            <div className={styles.wrapper}>
+              <button className={styles.loginButton}>Log in</button>
+            </div>
+          </form>
+        </Card>
+      </div>
     )
   }
 }

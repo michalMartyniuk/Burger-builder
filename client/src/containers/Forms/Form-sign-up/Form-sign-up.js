@@ -3,6 +3,7 @@ import Input from '../Input/Input';
 import formConfig from '../Form-config/sign-up-config';
 import Button from '../../../components/UI/Buttons/Button/Button'
 import Card from '../../../components/UI/Card/Card';
+import GoogleButton from '../../../components/UI/Buttons/google-button/google-button';
 
 import styles from './Form-sign-up.css';
 import { connect } from 'react-redux';
@@ -72,6 +73,7 @@ class SignupForm extends Component {
   render() {
     let inputs = Object.keys(this.state.formConfig).map( key => {
       return <Input
+        inputClass="Input"
         {...this.state.formConfig[key].config}
         validated={this.validatedHandler}
         key={key}
@@ -88,10 +90,15 @@ class SignupForm extends Component {
     return (
       <Card title="Sign up" styleTitle={{fontSize: '4rem'}} styleCard={{marginTop: '2rem'}}>
         <form className={styles.Form} onSubmit={this.formSubmitHandler}>
+          <GoogleButton googleClass="googleButton" text="Sign up"/>
+          <div className={styles.signupOr}>
+            <hr/>
+            <span>OR</span> 
+            <hr/>
+          </div>          
           {inputs}
           <div className={styles.wrapper}>
-            <Button type="text" btnclass="success">Order</Button>        
-            <Button type="text" btnclass="danger">Cancel</Button>
+            <button className={styles.signupButton}>Sign up</button>
           </div>
         </form>
       </Card>

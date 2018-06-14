@@ -8,7 +8,7 @@ const BurgerControl = props => {
         props.type.charAt(0).toUpperCase() + props.type.slice(1, props.type.length)
       }</span>
       <span className={styles.ctrlValue}>{props.value}</span>
-      <span className={styles.ctrlPrice}>$ {props.price}</span>
+      <span className={styles.ctrlPrice}>{props.price} $</span>
       <div className={styles.ctrlBtns}>
         <button 
           className={styles.ctrlLess}

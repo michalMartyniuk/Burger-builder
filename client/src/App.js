@@ -12,29 +12,39 @@ import Modal from './components/UI/Modal/Modal';
 import Backdrop from './components/UI/Backdrop/Backdrop';
 import Aux from './hoc/Aux';
 import { errMsgReset } from './store/actions/app';
-import { logOut } from './store/actions/auth';
+import { initLogIn, initSignUp, initLogOut } from './store/actions/auth';
 import Orders from './containers/Orders/Orders';
 import Navigation from './components/UI/Navigation/Navigation';
 import Sidedrawer from './components/UI/Sidedrawer/Sidedrawer';
+import LoginModal from './containers/Forms/Login-modal/Login-modal';
+import axios from 'axios';
+
 
 class App extends Component {
 
   state = {
     backdropState: false,
     modalState: false,
-    sidedrawerState: false
+    sidedrawerState: false,
+    loginModalState: false
   }
 
-  componentDidMount() {}
-  componentDidUpdate() {
-    console.log(this.props.message)
+  componentDidMount() {
+    if(!localStorage.getItem('userId')) {
+      axios.get('/api/user').then((res) => {
+        if(res.data) {
+          this.props.initLogIn(res.data.email, res.data.password)
+        }
+      })
+    }
   }
 
   backdropClick = () => {
     this.props.errMsgReset()
     this.setState({
       backdropState: false,
-      sidedrawerState: false
+      sidedrawerState: false,
+      loginModalState: false
     })
   }
 
@@ -55,11 +65,19 @@ class App extends Component {
     if(this.props.error) return this.props.error
   }
 
+  loginModalHandler = () => {
+    this.setState({
+      loginModalState: true,
+      backdropState: true
+    })
+  }
+
   render() {
     let loggedIn = localStorage.getItem('userId') ? true : false
 
     return (
       <div className={styles.App}>
+        <LoginModal state={this.state.loginModalState}/>
         <Sidedrawer 
           click={this.backdropClick} 
           show={this.state.sidedrawerState}
@@ -76,8 +94,9 @@ class App extends Component {
           <p className={styles.modalText}>{this.modalText()}</p>
         </Modal>
         <Navigation 
-          logout={this.props.logOut} 
+          logout={this.props.initLogOut} 
           toggleSidedrawer={this.toggleSidedrawer}
+          loginModal={this.loginModalHandler}
         />
         <Layout logout={this.props.logOut}>
           <Switch>
@@ -104,7 +123,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    logOut: () => dispatch( logOut() ),
+    initSignUp: (email, password) => dispatch( initSignUp(email, password)),
+    initLogIn: (email, password) => dispatch( initLogIn(email, password)),
+    initLogOut: () => dispatch( initLogOut() ),
     errMsgReset: () => dispatch( errMsgReset() ),
   }
 }

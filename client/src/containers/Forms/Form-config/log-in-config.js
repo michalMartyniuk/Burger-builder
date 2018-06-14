@@ -9,7 +9,7 @@ export default {
     value: '',
     validation: {
       required: { value: true, msg: "This field is required" },
-      minLength: { value: 6, msg: `Minimum character length is 4`}
+      minLength: { value: 6, msg: `Minimum character length is 6`}
     },
   },
   password: {
@@ -22,7 +22,7 @@ export default {
     value: '',
     validation: {
       required: { value: true, msg: "This field is required" },
-      minLength: { value: 6, msg: `Minimum character length is 4`}
+      minLength: { value: 6, msg: `Minimum character length is 6`}
     },
   },
 }

@@ -19,7 +19,7 @@ const Burger = props => {
   return (
     <div className={styles.Burger}>
       <BurgerIngredient type="bread-top" />
-      {getIngredients().length === 0 ? <p>Please start adding ingredients</p> : getIngredients()}
+      {getIngredients().length === 0 ? <p className={styles.burgerText}>Please start adding ingredients</p> : getIngredients()}
       <BurgerIngredient type="bread-bottom" />
     </div>
   )

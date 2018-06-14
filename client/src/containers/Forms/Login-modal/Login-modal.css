@@ -31,7 +31,7 @@
 }
 
 .loginButton {
-  width: 100%;
+  flex: 1;
   background-color: #25a025;
   color: white;
   font-size: 2rem;
@@ -51,15 +51,9 @@
   background-color: #30bb30;
 }
 
-@media (min-width: 768px) {
-  .loginButton {
-    width: 70%;
-  }
-}
-
-@media (max-width: 768px) {
-  .standardLogin {
-    display: block;
+@media (max-width: 760px) {
+  .modalLogin {
+    display: none;
   }
 }
 

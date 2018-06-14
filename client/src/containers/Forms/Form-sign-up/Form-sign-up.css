@@ -16,7 +16,44 @@
 
 .wrapper {
   display: flex;
-  justify-content: space-between;
   width: 100%;
-  padding: 0 1rem;
+}
+
+.signupOr {
+  display: flex;
+  margin: 1rem;
+}
+
+.signupOr hr {
+  background-color: rgba(0, 0, 0, 0.479);
+  width: 10rem;
+  margin: auto 1rem;
+}
+
+.signupButton {
+  width: 100%;
+  background-color: #25a025;
+  color: white;
+  font-size: 2rem;
+  padding: .8rem 5rem;
+  outline: none;
+  border: none;
+  border-radius: .5rem;
+  margin: 2.5rem auto;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .signupButton {
+    width: 70%;
+  }
+}
+
+@media (max-width: 425px) {
+  .signupButton {
+    padding: .8rem 0;
+  }
+  .signupOr hr {
+    width: 5rem;
+  }
 }

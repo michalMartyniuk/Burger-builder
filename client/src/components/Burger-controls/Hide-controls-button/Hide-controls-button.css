@@ -1,15 +1,31 @@
 .HideControlsButton {
+  display: flex;
+  background-color: #f08e4a69;
+  color: black;
   position: absolute;
-  top: 0;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  top: -14%;
   left: 50%;
-  width: 60%;
+  width: 15rem;
   transform: translateX(-50%);
-  opacity: 0;
-  height: 3.4rem;
+  height: 3.5rem;
   transition: all .5s;
+  cursor: pointer;
+}
+
+.HideControlsButton span {
+  margin: auto;
 }
 
 .HideControlsButton:hover {
+  background-color: #f08e4a;
   opacity: 1;
-  background-color: rgb(197, 181, 171);
+  
+}
+
+@media (min-width: 500px) {
+  .HideControlsButton {
+    width: 30rem;
+  }
 }

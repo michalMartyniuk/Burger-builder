@@ -9,11 +9,12 @@ const BurgerControls = props => {
     <div 
     className={styles.BurgerControls}
     style={{
-      transform: props.controlsState ? 'translate(-50%, 90%)' : null
+      transform: props.controlsState ? 'translate(-50%, 100%)' : null
     }}
     >
       <HideControlsButton  
-        toggleControls={props.toggleControls}  
+        toggleControls={props.toggleControls}
+        controlsState={props.controlsState}  
       />
       {Object.keys(props.ingredients).map( ing => {
         return (
@@ -30,7 +31,7 @@ const BurgerControls = props => {
       })
       }
       <div className={styles.checkout}>
-        <span className={styles.totalPrice}>Total: $ {props.totalPrice}</span>
+        <span className={styles.totalPrice}>Total: {props.totalPrice} $</span>
         <button 
           className={styles.checkoutBtn}
           onClick={props.toggleModal}  

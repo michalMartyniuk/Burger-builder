@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 80%;
   align-items: center;
-  margin: 5rem auto auto auto;
+  margin: 2rem auto auto auto;
   font-size: 2rem;
 }
 
@@ -16,7 +16,38 @@
 
 .wrapper {
   display: flex;
-  justify-content: space-between;
   width: 100%;
-  padding: 0 1rem;
+}
+
+.orderButton {
+  width: 100%;
+  background-color: #25a025;
+  color: white;
+  font-size: 2rem;
+  padding: .8rem 5rem;
+  outline: none;
+  border: none;
+  border-radius: .5rem;
+  margin: 2.5rem auto;
+  cursor: pointer;
+}
+
+.orderButton:focus {
+  outline:none;
+}
+
+.orderButton:hover {
+  background-color: #30bb30;
+}
+
+@media (min-width: 768px) {
+  .orderButton {
+    width: 70%;
+  }
+}
+
+@media (max-width: 425px) {
+  .orderButton {
+    padding: .8rem 0;
+  }
 }

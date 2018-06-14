@@ -1,91 +1,52 @@
-@media screen and (min-width: 760px) {
-  .BurgerControl {
-    display: flex;
-    align-items: center;
-  }
-
-  .ctrlType {
-    flex: 20%;
-    background-color: #4a2915;
-    padding: .5rem 1rem;
-    text-align: center;
-  }
-
-  .ctrlPrice {
-    flex: 10%;
-    background-color: #4c3f37;
-    padding: .5rem 1rem;
-    text-align: center;
-  }
-
-  .ctrlValue {
-    flex: 10%;
-    text-align: center;
-    padding: .5rem 1rem;
-    background-color: #a06e4c;
-  }
-
-  .ctrlBtns {
-    flex: 20%;
-    display: flex;
-    border: 1px solid black;
-  }
-
-  .ctrlBtns button {
-    outline: none;
-    font-size: 1.7rem;
-    padding: .5rem 1rem;
-    width: 100%;
-    height: 100%;
-  }
-
-  .ctrlBtns button:first-child {
-    border-right: 1px solid black;  
-  }
+.BurgerControl {
+  margin: .5rem;
+  display: flex;
+  align-items: center;
 }
 
-@media screen and (max-width: 760px) {
-  .BurgerControl {
-    display: flex;
-    align-items: center;
-  }
+.ctrlType {
+  flex: 20%;
+  background-color: #4a2915;
+  padding: .5rem;
+  text-align: center;
+}
 
-  .ctrlType {
-    flex: 20%;
-    background-color: #4a2915;
-    padding: .5rem 1rem;
-    text-align: center;
-  }
+.ctrlValue {
+  flex: 10%;
+  text-align: center;
+  padding: .5rem;
+  background-color: #a06e4c;
+}
 
-  .ctrlPrice {
-    flex: 10%;
-    background-color: #4c3f37;
-    padding: .5rem 1rem;
-    text-align: center;
-  }
+.ctrlPrice {
+  flex: 10%;
+  background-color: #4c3f37;
+  padding: .5rem;
+  text-align: center;
+}
 
-  .ctrlValue {
-    flex: 10%;
-    text-align: center;
-    padding: .5rem 1rem;
-    background-color: #a06e4c;
-  }
+.ctrlBtns {
+  flex: 20%;
+  display: flex;
+}
 
-  .ctrlBtns {
-    flex: 20%;
-    display: flex;
-    border: 1px solid black;
-  }
+.ctrlBtns button {
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 1.7rem;
+  padding: .5rem;
+  width: 100%;
+  height: 100%;
+  background-color: #d25f10;
+}
 
+.ctrlBtns button:first-child {
+  border-right: 1px solid black;  
+}
+
+@media (max-width: 450px) {
   .ctrlBtns button {
-    outline: none;
-    font-size: 1.7rem;
-    padding: .5rem 1rem;
-    width: 100%;
-    height: 100%;
-  }
-
-  .ctrlBtns button:first-child {
-    border-right: 1px solid black;  
+    font-size: 1.5rem;
   }
 }

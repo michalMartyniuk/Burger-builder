@@ -4,22 +4,28 @@ import styles from './Order-summary.css';
 import Aux from '../../hoc/Aux';
 
 const OrderSummary = props => {
-
-  let orderSummary = props.ingredients ? (
+  return (
     <div className={styles.orderSummary}>
-      {Object.keys(props.ingredients).map( ing => {
+      <table className={styles.orderTable}>
+        <tr className={styles.tableRow}>
+          <th className={styles.name}>Name</th>
+          <th className={styles.quantity}>Quantity</th>
+          <th className={styles.price}>Price</th>
+        </tr>
+        {Object.keys(props.ingredients).map( ing => {
       return <OrderItem 
         item={ing}
-        value={props.ingredients[ing].quantity}
+        quantity={props.ingredients[ing].quantity}
+        price={props.ingredients[ing].price}
         key={ing + props.ingredients[ing].quantity}
         itemClass={props.itemClass}
       />
       })}
-      <p className={styles[props.totalPriceClass]}>Total price: {props.totalPrice}</p>
+      </table>
+      
+      <p className={styles[props.totalPriceClass]}>Total price: {props.totalPrice} $</p>
     </div>
-  ) : null;
-
-  return orderSummary;
+  );
 }
 
 export default OrderSummary;

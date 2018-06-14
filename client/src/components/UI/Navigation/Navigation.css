@@ -19,6 +19,7 @@
   color: white;
   font-size: 2rem;
   padding: 1rem 2rem;
+  cursor: pointer;
 }
 
 .linkDiv:hover {
@@ -74,5 +75,14 @@
     height: 3px;
     margin: .4rem;
     background-color: white;
+  }
+}
+
+@media (min-width: 760px) {
+  .loginModal {
+    display: block;
+  }
+  .loginLink {
+    display: none;
   }
 }

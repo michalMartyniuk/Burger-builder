@@ -1,62 +1,16 @@
-.item {
-  flex: 1;
+.tableRow {}
+
+.tableRow td {
+  border-top: 1px solid #00000054;
+  padding: 1rem;
 }
 
-@media (min-width: 950px) {
-  .CheckoutItem {
-    display: flex;
-    width: 35%;
-    justify-content: space-around;
-    margin-top: 1.6rem;
-    letter-spacing: .2rem;
-    font-size: inherit;
-  }
-
-  .ModalItem {
-    display: flex;
-    width: 60%;
-    justify-content: space-around;
-    margin-top: 1.6rem;
-    letter-spacing: .2rem;
-    font-size: inherit;
-  }
+.name {
+  text-align: center;
 }
-
-@media (max-width: 760px) {
-  .CheckoutItem {
-    display: flex;
-    width: 70%;
-    justify-content: space-around;
-    margin-top: 1.6rem;
-    letter-spacing: .2rem;
-    font-size: inherit;
-  }
-
-  .ModalItem {
-    display: flex;
-    width: 70%;
-    justify-content: space-around;
-    margin-top: 1.6rem;
-    letter-spacing: .2rem;
-    font-size: inherit;
-  }
+.quantity {
+  text-align: center;
 }
-@media (max-width: 950px){
-  .CheckoutItem {
-    display: flex;
-    width: 40%;
-    justify-content: space-around;
-    margin-top: 1.6rem;
-    letter-spacing: .2rem;
-    font-size: inherit;
-  }
-
-  .ModalItem {
-    display: flex;
-    width: 40%;
-    justify-content: space-around;
-    margin-top: 1.6rem;
-    letter-spacing: .2rem;
-    font-size: inherit;
-  }
+.price {
+  text-align: center;
 }

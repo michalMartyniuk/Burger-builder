@@ -2,12 +2,21 @@
   display: block;
   outline: none;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
-.inputElement {
+.modalInput {
+  display: block;
+  outline: none;
   width: 100%;
-  padding: .5rem;
+  padding: 1rem 0;
+}
+
+
+.inputElement {
+  border: 1px solid rgba(0, 0, 0, 0.445);
+  width: 100%;
+  padding: .5rem 1rem;
 }
 
 
@@ -22,4 +31,10 @@
   background-color: #ecc1c1;
   padding: .2rem 1rem;
   margin-top: .5rem;
+}
+
+@media (min-width: 768px) {
+  .Input {
+    width: 70%;
+  }
 }

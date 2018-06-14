@@ -10,12 +10,12 @@ const Order = props => {
       <div className={styles.ingredient}>
         <div>{ingredient}</div>
         <div>{props.ingredients[ingredient].quantity}</div>
-        <div>{props.ingredients[ingredient].price}</div>  
+        <div>{props.ingredients[ingredient].price} $</div>  
       </div>
     )
   })
 
-  const totalPrice = <div className={styles.totalPrice}>Total price: {props.totalPrice}</div>
+  const totalPrice = <div className={styles.totalPrice}>Total price: {props.totalPrice} $</div>
 
 
   return (

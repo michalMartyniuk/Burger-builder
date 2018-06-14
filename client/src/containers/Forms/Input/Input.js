@@ -23,8 +23,7 @@ const Input = props => {
   }
 
   return (
-    <div className={styles.Input}>
-      <label htmlFor="">{props.label}</label>
+    <div className={styles[props.inputClass]}>
       {createInput()}
       <Validation 
         valid={props.validated}
