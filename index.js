@@ -20,6 +20,10 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.get('/hello', (req, res) => {
+  res.send('Hello')
+})
+
 app.get('/api/user', (req, res) => {
   console.log('Api user')
   res.send(req.user)
