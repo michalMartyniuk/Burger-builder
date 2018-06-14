@@ -43,6 +43,11 @@
   background-color: #ec6c15;
 }
 
+@media (min-width: 760px) {
+  .BurgerControls {
+    width: 70%;
+  }
+}
 
 @media (max-width: 450px) {
   .BurgerControls {

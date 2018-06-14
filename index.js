@@ -20,14 +20,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  next();
-})
-
-
 app.get('/api/user', (req, res) => {
   res.send(req.user)
 })
@@ -45,8 +37,8 @@ app.get('/auth/google/callback', passport.authenticate('google'), (req, res) => 
   res.redirect('/')
 })
 
-// if(process.env.NODE_ENV === 'production') {
-  // app.use(express.static(path.join(__dirname, 'client/build')));  
-// }
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')));  
+}
 
 app.listen(port, () => console.log(`Node server is running on port: ${port}`));

@@ -41,6 +41,10 @@
   background-color: #d25f10;
 }
 
+.ctrlBtns button:hover {
+  background-color: #ec6c15;
+}
+
 .ctrlBtns button:first-child {
   border-right: 1px solid black;  
 }
