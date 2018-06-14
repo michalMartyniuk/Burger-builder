@@ -21,6 +21,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/api/user', (req, res) => {
+  console.log('Api user')
   res.send(req.user)
 })
 
@@ -38,7 +39,10 @@ app.get('/auth/google/callback', passport.authenticate('google'), (req, res) => 
 })
 
 if(process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));  
+  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })  
 }
 
 app.listen(port, () => console.log(`Node server is running on port: ${port}`));
