@@ -1,4 +1,5 @@
 .Navigation {
+  font-family: 'Fugaz One';
   display: flex;
   position: fixed;
   top: 0;
@@ -15,11 +16,25 @@
   text-decoration: none;
 }
 
+.menu {
+  display: flex;
+  margin-left: auto;
+}
+
 .linkDiv {
   color: white;
   font-size: 2rem;
   padding: 1rem 2rem;
   cursor: pointer;
+  margin-left: auto;
+}
+
+.burgerIcon {
+  margin-left: 2rem;
+}
+
+.navText {
+  margin-left: 1rem;
 }
 
 .linkDiv:hover {
@@ -53,6 +68,10 @@
     display: none;
   }
 
+  .burgerIcon {
+    display: none;
+  }
+
   .logout {
     display: none;
   }
@@ -79,10 +98,10 @@
 }
 
 @media (min-width: 760px) {
-  .loginModal {
+  .linkDiv {
     display: block;
   }
-  .loginLink {
+  .loginLink, .signupLink {
     display: none;
   }
 }

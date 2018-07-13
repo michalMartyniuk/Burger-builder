@@ -15,6 +15,7 @@
 
 .inputElement {
   border: 1px solid rgba(0, 0, 0, 0.445);
+  border-radius: .5rem;
   width: 100%;
   padding: .5rem 1rem;
 }

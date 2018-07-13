@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import Input from '../Input/Input';
-import formConfig from '../Form-config/log-in-config';
-import Button from '../../../components/UI/Buttons/Button/Button';
+import formConfig from '../Form-config/sign-up-config';
+import Button from '../../../components/UI/Buttons/Button/Button'
 import GoogleButton from '../../../components/UI/Buttons/google-button/google-button';
 import Modal from '../../../components/UI/Modal/Modal';
 import Aux from '../../../hoc/Aux';
 
-import styles from './Login-modal.css';
+import styles from './Signup-modal.css';
 import { connect } from 'react-redux';
-import { initLogIn } from '../../../store/actions/auth';
+import { initSignUp } from '../../../store/actions/auth';
 
-class LoginModal extends Component {
+class SignupModal extends Component {
   state = {
     formConfig,
-    validation: {},
+    validation: {}
   }
 
   componentDidMount() {
@@ -62,7 +62,7 @@ class LoginModal extends Component {
       for(let key in this.state.formConfig) {
         userInfo[key] = this.state.formConfig[key].value
       }
-      this.props.initLogIn(userInfo.email, userInfo.password)
+      this.props.initSignUp(userInfo.email, userInfo.password)
     }
     
   }
@@ -88,19 +88,19 @@ class LoginModal extends Component {
       />
     })
 
-    let loginModal = this.props.state ? (
-      <div className={styles.modalLogin}>
-        <Modal show title="Log in">
+    let signupModal = this.props.state ? (
+      <div className={styles.modalSignup}>
+        <Modal show title="Sign up">
           <form className={styles.Form} onSubmit={this.formSubmitHandler}>
             <GoogleButton googleClass="googleModalButton" text="Sign in with google"/>
-            <div className={styles.loginOr}>
+            <div className={styles.signupOr}>
               <hr/>
               <span>OR</span> 
               <hr/>
             </div>          
             {inputs}
             <div className={styles.wrapper}>
-              <button className={styles.loginButton}>Log in</button>
+              <button className={styles.signupButton}>Sign up</button>
             </div>
           </form>
         </Modal>
@@ -109,7 +109,7 @@ class LoginModal extends Component {
 
     return (
       <Aux>
-        {loginModal}
+        {signupModal}
       </Aux>
     )
   }
@@ -117,14 +117,14 @@ class LoginModal extends Component {
 
 const mapStateToProps = state => {
   return {
-    userId: state.auth.userId
+
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    initLogIn: (email, password) => dispatch( initLogIn(email, password))
+    initSignUp: (email, password) => dispatch( initSignUp(email, password))
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginModal);
+export default connect(mapStateToProps, mapDispatchToProps)(SignupModal);

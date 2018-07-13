@@ -49,7 +49,7 @@ class Checkout extends Component {
   }
 }
 
-const mapStateTotProps = state => {
+const mapStateToProps = state => {
   return {
     ingredients: state.builder.ingredients,
     totalPrice: state.builder.totalPrice,
@@ -63,4 +63,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateTotProps, mapDispatchToProps)(Checkout);
+export default connect(mapStateToProps, mapDispatchToProps)(Checkout);

@@ -8,6 +8,7 @@ export default {
     },
     value: '',
     validation: {
+      isEmail: { value: false, msg: "Invalid email address" },
       required: { value: true, msg: "This field is required" },
       minLength: { value: 4, msg: `Minimum character length is 4`}
     },
@@ -22,6 +23,7 @@ export default {
     },
     value: '',
     validation: {
+      isEmail: { value: false, msg: "Invalid email address" },
       required: { value: true, msg: "This field is required" },
       minLength: { value: 4, msg: `Minimum character length is 4`}
     },
@@ -36,6 +38,7 @@ export default {
     },
     value: '',
     validation: {
+      isEmail: { value: false, msg: "Invalid email address" },
       required: { value: true, msg: "This field is required" },
       minLength: { value: 4, msg: `Minimum character length is 4`}
     },
@@ -50,6 +53,7 @@ export default {
     },
     value: '',
     validation: {
+      isEmail: { value: false, msg: "Invalid email address" },
       required: { value: true, msg: "This field is required" },
       minLength: { value: 4, msg: `Minimum character length is 4`}
     },
@@ -64,6 +68,7 @@ export default {
     },
     value: '',
     validation: {
+      isEmail: { value: false, msg: "Invalid email address" },
       required: { value: true, msg: "This field is required" },
       minLength: { value: 4, msg: `Minimum character length is 4`}
     },

@@ -17,6 +17,8 @@ import Orders from './containers/Orders/Orders';
 import Navigation from './components/UI/Navigation/Navigation';
 import Sidedrawer from './components/UI/Sidedrawer/Sidedrawer';
 import LoginModal from './containers/Forms/Login-modal/Login-modal';
+import SignupModal from './containers/Forms/Singup-modal/Signup-modal';
+
 import axios from 'axios';
 
 
@@ -26,7 +28,8 @@ class App extends Component {
     backdropState: false,
     modalState: false,
     sidedrawerState: false,
-    loginModalState: false
+    loginModalState: false,
+    signupModalState: false
   }
 
   componentDidMount() {
@@ -44,7 +47,8 @@ class App extends Component {
     this.setState({
       backdropState: false,
       sidedrawerState: false,
-      loginModalState: false
+      loginModalState: false,
+      signupModalState: false
     })
   }
 
@@ -56,7 +60,6 @@ class App extends Component {
   }
 
   modalTitle = () => {
-    if(this.props.message) return 'Success!'
     if(this.props.error) return 'Error'
   }
 
@@ -72,12 +75,20 @@ class App extends Component {
     })
   }
 
+  signupModalHandler = () => {
+    this.setState({
+      signupModalState: true,
+      backdropState: true
+    })
+  }
+
   render() {
     let loggedIn = localStorage.getItem('userId') ? true : false
 
     return (
       <div className={styles.App}>
         <LoginModal state={this.state.loginModalState}/>
+        <SignupModal state={this.state.signupModalState}/>
         <Sidedrawer 
           click={this.backdropClick} 
           show={this.state.sidedrawerState}
@@ -97,6 +108,7 @@ class App extends Component {
           logout={this.props.initLogOut} 
           toggleSidedrawer={this.toggleSidedrawer}
           loginModal={this.loginModalHandler}
+          signupModal={this.signupModalHandler}
         />
         <Layout logout={this.props.logOut}>
           <Switch>

@@ -7,6 +7,9 @@ const validation = props => {
 
   const valid = ({name, value, message}) => {
     switch(name) {
+      case 'isEmail': 
+        validated.isEmail = { name, value, message }
+        break;
       case 'required':
         validated.required = { name, value, message }
         break;
@@ -22,10 +25,25 @@ const validation = props => {
     let messages = []
     let message = <p className={styles.invalid}>Validation required</p>
     
+    if(props.validation.isEmail.value === true) {
+      const pattern = /^[^\\/!@#$%^&*()=+{}:`~?'"<>|]+@[^\\/!@#$%^&*()=+{}:`~?'"<>|.]+\.[^\\/!@#$%^&*()=+{}:`~?'"<>|.]{2,4}$/
+      if(!pattern.test(props.value)) {
+        let message = props.validation.isEmail.msg
+        valid({ 
+          name: 'isEmail', 
+          value: false, 
+          message: message
+        })
+        messages.push(message)
+      }
+      else {
+        valid({ name: 'isEmail', value: true, msg: null })
+      }
+    }
+
     if(props.validation.required.value === true) { 
       if(props.value == '') {
         let message = props.validation.required.msg
-        console.log(message)
         valid({ 
           name: 'required', 
           value: false, 

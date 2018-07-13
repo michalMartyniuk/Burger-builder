@@ -1,4 +1,5 @@
 .Sidedrawer {
+  font-family: 'Fugaz One';
   display: flex;
   flex-direction: column;
   position: fixed;

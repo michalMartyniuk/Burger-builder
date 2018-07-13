@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styles from './Orders.css';
-import Order from './Order/Order';
 import axios from '../../axios-orders';
+import OrderSummary from '../../components/Order-summary/Order-summary';
+import Card from '../../components/UI/Card/Card';
 
 class Orders extends Component {
 
@@ -25,15 +26,29 @@ class Orders extends Component {
   }
 
   render() {
-    let orders = this.state.orders ? Object.keys(this.state.orders).map( order => {
-      return <Order 
-        ingredients={this.state.orders[order].ingredients}
-        totalPrice={this.state.orders[order].totalPrice}
-        createdAt={this.state.orders[order].createdAt}
-        key={order}
-        id={order}
-      />
-    }) : null
+    let orders = this.state.orders ? 
+      Object.keys(this.state.orders).map( order => {
+        return (
+          <Card 
+            title={"Id: " + order} 
+            styleTitle={{fontSize: '2.2rem', marginBottom: '1rem'}}
+            styleCard={{
+              margin: '2rem auto',
+              fontSize: '2rem'
+            }}
+          >
+            <p className={styles.createdAt}>Created at: {this.state.orders[order].createdAt}</p>
+            <OrderSummary 
+              ingredients={this.state.orders[order].ingredients}
+              totalPrice={this.state.orders[order].totalPrice}
+              createdAt={this.state.orders[order].createdAt}
+              key={order}
+              id={order}
+              totalPriceClass="summaryTotalPrice"
+            />
+          </Card>
+        )
+      }) : null
 
     return (
       <div className={styles.Orders}>

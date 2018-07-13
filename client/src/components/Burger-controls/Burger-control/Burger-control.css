@@ -1,5 +1,5 @@
 .BurgerControl {
-  margin: .5rem;
+  margin: .2rem;
   display: flex;
   align-items: center;
 }
@@ -7,6 +7,8 @@
 .ctrlType {
   flex: 20%;
   background-color: #4a2915;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
   padding: .5rem;
   text-align: center;
 }
@@ -30,7 +32,7 @@
   display: flex;
 }
 
-.ctrlBtns button {
+.ctrlLess, .ctrlMore {
   color: white;
   outline: none;
   border: none;
@@ -41,12 +43,17 @@
   background-color: #d25f10;
 }
 
-.ctrlBtns button:hover {
-  background-color: #ec6c15;
+.ctrlMore {
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
 }
 
-.ctrlBtns button:first-child {
-  border-right: 1px solid black;  
+.ctrlLess {
+  margin-right: .2rem;
+}
+
+.ctrlBtns button:hover {
+  background-color: #ec6c15;
 }
 
 @media (max-width: 450px) {

@@ -91,25 +91,26 @@
   
   .Cheese {
     width: 62rem;
-    height: 3.6rem;
+    height: 3rem;
     margin: .5rem auto;
     background: linear-gradient(#f4d004, #d6bb22);
     border-radius: 2rem;
   }
   
   .Salad {
-    width: 62rem;
-    height: 3.6rem;
+    width: 61rem;
+    height: 3rem;
     margin: .5rem auto;
     background: linear-gradient(#228c1d, #91ce50);
     border-radius: 2rem;
   }
   
   .Bacon {
-    width: 60rem;
-    height: 3.4rem;
+    width: 58rem;
+    height: 2.5rem;
     background: linear-gradient(#bf3813, #c45e38);
     margin: .5rem auto;
+    border-radius: .5rem;
   }  
 }
 
@@ -206,7 +207,7 @@
   
   .Cheese {
     width: 48rem;
-    height: 2.8rem;
+    height: 2.5rem;
     margin: .5rem auto;
     background: linear-gradient(#f4d004, #d6bb22);
     border-radius: 2rem;
@@ -214,15 +215,16 @@
   
   .Salad {
     width: 48rem;
-    height: 2.8rem;
+    height: 2.5rem;
     margin: .5rem auto;
     background: linear-gradient(#228c1d, #91ce50);
     border-radius: 2rem;
   }
   
   .Bacon {
-    width: 45rem;
-    height: 2.6rem;
+    width: 43.5rem;
+    height: 1.9rem;
+    border-radius: .5rem;
     background: linear-gradient(#bf3813, #c45e38);
     margin: .5rem auto;
   }  
@@ -336,10 +338,11 @@
   }
   
   .Bacon {
-    width: 35rem;
-    height: 2.2rem;
+    width: 34rem;
+    height: 1.7rem;
     background: linear-gradient(#bf3813, #c45e38);
     margin: .5rem auto;
+    border-radius: .5rem;
   }  
 }
 
@@ -451,8 +454,8 @@
   }
   
   .Bacon {
-    width: 28rem;
-    height: 1.6rem;
+    width: 27rem;
+    height: 1.5rem;
     background: linear-gradient(#bf3813, #c45e38);
     margin: .5rem auto;
   }  
@@ -566,8 +569,8 @@
   }
   
   .Bacon {
-    width: 24rem;
-    height: 1.4rem;
+    width: 23rem;
+    height: 1.2rem;
     background: linear-gradient(#bf3813, #c45e38);
     margin: .5rem auto;
   }  

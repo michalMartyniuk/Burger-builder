@@ -8,8 +8,9 @@ export default {
     },
     value: '',
     validation: {
+      isEmail: { value: true, msg: "Invalid email address" },
       required: { value: true, msg: "This field is required" },
-      minLength: { value: 6, msg: `Minimum character length is 6`}
+      minLength: { value: 6, msg: `Minimum character length is 4`}
     },
   },
   password: {
@@ -21,8 +22,9 @@ export default {
     },
     value: '',
     validation: {
+      isEmail: { value: false, msg: "Invalid email address" },
       required: { value: true, msg: "This field is required" },
-      minLength: { value: 6, msg: `Minimum character length is 6`}
+      minLength: { value: 6, msg: `Minimum character length is 4`}
     },
   },
 }

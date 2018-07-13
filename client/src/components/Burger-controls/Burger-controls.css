@@ -1,5 +1,7 @@
 .BurgerControls {
   position: fixed;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -22,6 +24,8 @@
 
 .totalPrice {
   background-color: #4c3f37;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
   color: white;
   padding: .7rem 2rem;
   font-size: 2rem;
@@ -29,6 +33,8 @@
 
 .checkoutBtn {
   background-color: #d25f11;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
   width: 40%;
   color: white;
   border: none;
